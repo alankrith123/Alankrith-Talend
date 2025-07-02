@@ -1,0 +1,50 @@
+package routines;
+
+/*
+ * Routine for generating MD5 hashes.
+ */
+public class MD5 {
+
+    /**
+     * Prints "Hello" + message.
+     *
+     * {talendTypes} String
+     *
+     * {Category} User Defined
+     *
+     * {param} string("world") input: The string to print.
+     *
+     * {example} helloExample("Talend") # Hello Talend !
+     */
+    public static void helloExample(String message) {
+        if (message == null) {
+            message = "World";
+        }
+        System.out.println("Hello " + message + " !");
+    }
+
+    /**
+     * Generates MD5 hash of a given input string.
+     *
+     * {talendTypes} String
+     *
+     * {Category} User Defined
+     *
+     * {param} string input: The string to hash.
+     *
+     * {example} getMD5("abc") # 900150983cd24fb0d6963f7d28e17f72
+     */
+    public static String getMD5(String input) {
+        try {
+            java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
+            byte[] array = md.digest(input.getBytes("UTF-8"));
+            StringBuilder sb = new StringBuilder();
+            for (byte b : array) {
+                sb.append(String.format("%02x", b & 0xff));
+            }
+            return sb.toString();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+}
