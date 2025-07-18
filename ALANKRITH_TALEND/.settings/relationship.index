@@ -1,5 +1,20 @@
 [ {
   "baseItem" : {
+    "id" : "_DjfEoGIQEfCmsOBnikKISA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_-LJuAGIPEfCmsOBnikKISA",
+    "version" : "Latest",
+    "type" : "joblet"
+  }, {
+    "id" : "_v6H4YGIPEfCmsOBnikKISA",
+    "version" : "Latest",
+    "type" : "joblet"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_nFQfEFcPEfCTYcBxEYS_XA",
     "version" : "0.1",
     "type" : "job"
